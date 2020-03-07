@@ -1,0 +1,18 @@
+{
+
+    "manifest_version": 2,
+    "name": "Autograder_Helper",
+    "version": "1.0",
+  
+    "description": "Adds buttons to open new tabs for assigned submissions",
+  
+  
+    "content_scripts": [
+      {
+        "matches": ["*://autograder.cse.buffalo.edu/*/viewGradesheet"],
+        "js": ["assigned_reader.js"],
+        "all_frames": true
+      }
+    ]
+  
+  }
