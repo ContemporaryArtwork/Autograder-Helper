@@ -9,10 +9,24 @@
   
     "content_scripts": [
       {
-        "matches": ["*://autograder.cse.buffalo.edu/*/viewGradesheet"],
-        "js": ["assigned_reader.js"],
-        "all_frames": true
+        "matches": ["*://autograder.cse.buffalo.edu/*/viewGradesheet*"],
+        "js": ["Autograder-Helper.js"]
+        
       }
+    ],
+
+
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "addon@example.com"
+      }
+    },
+
+    "permissions": [
+      "*://autograder.cse.buffalo.edu/*",
+      "activeTab",
+      "contextMenus"
     ]
+    
   
   }
